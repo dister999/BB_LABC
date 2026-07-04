@@ -11,6 +11,6 @@ int main() {
     area = PI*radius*radius;
     circum = 2*PI*radius;
     cout << "Area of circle with radius " << radius << " is " << area << endl;
-    cout << "CCircumferencce is " << circum << endl;
+    cout << "Circumferencce is " << circum << endl;
     return (0);
 }
