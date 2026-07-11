@@ -12,9 +12,14 @@ int main()
     cout << "\nBefore A = " << A << endl;
     cout << "A++  = " << A++ << endl;
     cout << "After A = " << A << endl;
-    cout << "Before B = " << B << endl;
-    cout << "++B  = " << ++B << endl;
+    cout << "\nBefore A = " << A << endl;
+    cout << "++A  = " << ++A << endl;
+    cout << "After A = " << A << endl;
+    cout << "\nBefore B = " << B << endl;
+    cout << "B--  = " << B-- << endl;
     cout << "After B = " << B << endl;
-
+    cout << "\nBefore B = " << B << endl;
+    cout << "--B  = " << --B << endl;
+    cout << "After B = " << B << endl;
     return (0);
 }
