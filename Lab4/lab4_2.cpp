@@ -1,7 +1,4 @@
-/* Program 4_2 : Use if-else statement */
-
 #include <iostream>
-
 using namespace std;
 int main()
 {
@@ -12,14 +9,11 @@ int main()
 
     if ((year % 4) == 0)
     {
-        /* Block of True Condition*/
         cout << "In " << year << " is leap year ";
         maxday = 29;
     }
     else
     {
-
-        /* Blok of False Condition */
         cout << "In " << year << "is not leap year ";
         maxday = 28;
     }

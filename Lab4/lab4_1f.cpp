@@ -5,7 +5,7 @@ void fn1(int);
 void fn2(int);
 void fn3(float);
 void fn4(float, char);
-void fn5(int,float);
+void fn5(int, float);
 
 int main()
 {
@@ -17,8 +17,8 @@ int main()
     fn3(3.0001);          // fn3 false
     fn4(2.4444, 'R');     // fn4 true
     fn4(1000.00001, 'L'); // fn4 false
-    fn5(3, 1); // fn5 true
-    fn5(3, 6); // fn5 false
+    fn5(3, 1);            // fn5 true
+    fn5(3, 6);            // fn5 false
     return (0);
 }
 
