@@ -30,7 +30,8 @@ int main()
         Result = LeftOparand / RightOparand;
     else
     {
-        cout << " equals " << endl;
+        cout << Oparator << " is unrecognized operation." << endl;
+        return (1);
     }
     cout << LeftOparand << " " << Oparator << " " << RightOparand << " equals " << Result << endl;
     return (0);
