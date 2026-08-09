@@ -1,4 +1,3 @@
-/* Program 4_11 : Use do while statement */
 #include <iostream>
 using namespace std;
 
