@@ -90,40 +90,9 @@ void DisplayStudent(string FN)
         int Score;
         int n = 0;
         cout << "List Student\n";
-        cout << "=====================\n";
+        cout << "==========================\n";
         cout << right << setw(3) << "No." << left << setw(6) << "Id Name\n";
-        cout << "=====================\n";
-
-        InFile >> Id >> Name;
-        while (!InFile.eof())
-        {
-            n = n + 1;
-            cout << right << setw(3) << n << ":"
-                 << left << setw(6) << Id << " "
-                 << Name << " " << Score << " " << CalGrade(Score) << endl;
-            InFile >> Id >> Name;
-        }
-        InFile.close();
-        char wait;
-        cin.get(wait);
-    }
-    else
-    {
-        cout << "File could not opened." << endl;
-    }
-}
-
-void ReportGrade(string FN){
- ifstream InFile(FN, ios_base::in);
-    if (InFile.is_open())
-    {
-        string Id, Name;
-        int Score;
-        int n = 0;
-        cout << "List Student\n";
-        cout << "=====================\n";
-        cout << right << setw(3) << "No." << left << setw(6) << "Id Name\n";
-        cout << "=====================\n";
+        cout << "==========================\n";
 
         InFile >> Id >> Name >> Score;
         while (!InFile.eof())
@@ -144,6 +113,48 @@ void ReportGrade(string FN){
     }
 }
 
-string CalGrade(int)
+void ReportGrade(string FN)
 {
+    ifstream InFile(FN, ios_base::in);
+    if (InFile.is_open())
+    {
+        string Id, Name;
+        int Score;
+        int n = 0;
+        cout << "List Student\n";
+        cout << "==========================\n";
+        cout << right << setw(3) << "No." << left << setw(6) << "Id Name\n";
+        cout << "==========================\n";
+
+        InFile >> Id >> Name >> Score;
+        while (!InFile.eof())
+        {
+            n = n + 1;
+            cout << right << setw(3) << n << ":"
+                 << left << setw(6) << Id << " "
+                 << Name << " " << Score << " " << CalGrade(Score) << endl;
+            InFile >> Id >> Name >> Score;
+        }
+        InFile.close();
+        char wait;
+        cin.get(wait);
+    }
+    else
+    {
+        cout << "File could not opened." << endl;
+    }
+}
+
+string CalGrade(int Score)
+{
+    if (Score >= 80)
+        return "A";
+    else if (Score >= 70)
+        return "B";
+    else if (Score >= 60)
+        return "C";
+    else if (Score >= 50)
+        return "D";
+    else
+        return "F";
 }
